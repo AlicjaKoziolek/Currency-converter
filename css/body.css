@@ -22,7 +22,7 @@ html {
     flex-direction: column;
 }
 
-.footer {
+.body__footer {
     color: rgb(26, 26, 95);
     font-family: 'Josefin Sans', sans-serif;
     padding: 10px;
