@@ -1,27 +1,35 @@
-let plnElement = document.querySelector(".js-pln");
-let formElement = document.querySelector(".js-form");
-let resultElement = document.querySelector(".js-result");
-let currencyElement = document.querySelector(".js-currency");
+{
+    const calculateResult = (plnElement, currencyElement) => {
+        const eur = 4.61;
+        const usd = 3.97;
 
+        switch (currencyElement) {
+            case "eur":
+                return plnElement / eur;
 
-let eur = 4.61;
-let usd = 3.97;
-let result 
+            case "usd":
+                return plnElement / usd;
+        }
+    };
 
+   const init = () => {
+    const formElement = document.querySelector(".js-form");
 
-formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
+    formElement.addEventListener("submit", (event) => {
+        event.preventDefault();
 
-    switch (currencyElement.value) {
-        case "eur":
-    result = plnElement.value / eur;
-            break;
-    
-        case "usd":
-    result= plnElement.value / usd;
-    break;
-    }
-    
-    resultElement.innerText= result.toFixed(2);
-});
+        const plnElement = document.querySelector(".js-pln");
+        const resultElement = document.querySelector(".js-result");
+        const currencyElement = document.querySelector(".js-currency");
 
+        const plnElement = plnElement.value;
+        const currencyElement = currencyElement.value;
+
+        const result = calculateResult(plnElement, currencyElement);
+
+        resultElement.innerText = result.toFixed(2);
+    });
+   };
+
+   init ();
+}
