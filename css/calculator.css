@@ -1,13 +1,3 @@
-html {
-    box-sizing: border-box;
-}
-
-*;
-::after;
-::before {
-    box-sizing: inherit;
-}
-
 .calculator {
     flex-basis: 500px;
     margin: 20px;
