@@ -12,24 +12,23 @@
         }
     };
 
-   const init = () => {
-    const formElement = document.querySelector(".js-form");
-
-    formElement.addEventListener("submit", (event) => {
+    const onFormSubmit = (event) => {
         event.preventDefault();
 
-        const plnElement = document.querySelector(".js-pln");
+        const plnElement = document.querySelector(".js-pln").value;
         const resultElement = document.querySelector(".js-result");
-        const currencyElement = document.querySelector(".js-currency");
-
-        const plnElement = plnElement.value;
-        const currencyElement = currencyElement.value;
+        const currencyElement = document.querySelector(".js-currency").value;
 
         const result = calculateResult(plnElement, currencyElement);
 
         resultElement.innerText = result.toFixed(2);
-    });
-   };
+    };
 
-   init ();
+    const init = () => {
+        const formElement = document.querySelector(".js-form");
+
+        formElement.addEventListener("submit", onFormSubmit)
+    };
+
+    init();
 }
