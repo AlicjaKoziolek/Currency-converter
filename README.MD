@@ -16,7 +16,6 @@ To go to the website, click on the link: [Currency-converter](https://alicjakozi
 ## *Technologies used:*
 - HTLM
 - CSS
-- Flexbox
 - BEM
 - S6 JavaScript
 - Media queries
