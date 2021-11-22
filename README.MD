@@ -18,4 +18,3 @@ To go to the website, click on the link: [Currency-converter](https://alicjakozi
 - CSS
 - BEM
 - S6 JavaScript
-- Media queries
